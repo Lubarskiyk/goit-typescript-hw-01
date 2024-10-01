@@ -1,4 +1,16 @@
-const mango = {
+interface IAddress {
+  city: string;
+  country: string;
+}
+
+interface IUser {
+  name: string;
+  age: number;
+  email: string;
+  address?: IAddress;
+}
+
+const mango: IUser = {
   name: "Mango",
   age: 30,
   email: "john@example.com",
@@ -7,9 +19,10 @@ const mango = {
     country: "USA",
   },
 };
-
-const poly = {
+console.log(mango);
+const poly: IUser = {
   name: "Mango",
   age: 30,
   email: "john@example.com",
 };
+console.log(poly);
